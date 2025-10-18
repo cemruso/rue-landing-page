@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 const WaveIcon = () => (
   <svg
@@ -115,19 +116,19 @@ export default function Home() {
 
         {/* Footer Links */}
         <div className="flex gap-4 text-sm">
-          <a
-            href="#"
+          <Link
+            href="/support"
             className="text-gray-400 underline decoration-gray-600 underline-offset-4 hover:text-gray-300 hover:decoration-gray-400 transition-colors"
           >
             Pixi Support
-          </a>
+          </Link>
           <span className="text-gray-600">•</span>
-          <a
-            href="#"
+          <Link
+            href="/support"
             className="text-gray-400 underline decoration-gray-600 underline-offset-4 hover:text-gray-300 hover:decoration-gray-400 transition-colors"
           >
             Cue Support
-          </a>
+          </Link>
         </div>
       </div>
     </div>
