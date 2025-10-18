@@ -1,103 +1,135 @@
-import Image from "next/image";
+import { Card } from "@/components/ui/card";
+
+const WaveIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    className="text-white"
+  >
+    <path
+      d="M3 12C3 12 5.5 7 12 7C18.5 7 21 12 21 12C21 12 18.5 17 12 17C5.5 17 3 12 3 12Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="2"/>
+    <path
+      d="M2 6L4 8M20 6L18 8M6 2L8 4M16 2L18 4M2 18L4 16M20 18L18 16M6 22L8 20M16 22L18 20"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const apps = [
+    {
+      icon: "⚫",
+      name: "Pixi Chat",
+      description: "One app, every model",
+    },
+    {
+      icon: "🎵",
+      name: "Cue",
+      description: "Audio companion",
+    },
+    {
+      icon: "✌️",
+      name: "Deep",
+      description: "Coming soon",
+    }
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#1a1b3a] via-[#0f1022] to-[#0a0b1e] text-white font-sans">
+      <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col items-center text-center">
+
+        {/* Logo and Navigation */}
+        <div className="flex items-center gap-2 mb-12">
+          <WaveIcon />
+          <span className="text-xl font-medium">44pixels</span>
+        </div>
+
+        {/* Main Content */}
+        <div className="space-y-8 mb-16">
+          <p className="text-gray-300 text-lg leading-relaxed">
+            We're a team of product specialists building the next wave of
+            <br />
+            everyday mobile products—powered by AI.
+          </p>
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Since launching in summer 2024, our apps are already in the
+            <br />
+            hands of millions of people worldwide.
+          </p>
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Based in London, our team were previously building at
+            <br />
+            companies like Meta, X, Google, Unity, and Monzo. We're
+            <br />
+            actively hiring roles across product, marketing, and data.
+          </p>
+
+          <p className="text-gray-300 text-lg">
+            If you're curious about what we're building,{" "}
+            <a
+              href="#"
+              className="text-white underline decoration-gray-400 underline-offset-4 hover:decoration-white transition-colors"
+            >
+              drop us an email
+            </a>
+            .
+          </p>
+        </div>
+
+        {/* Apps Grid */}
+        <div className="space-y-4 w-full max-w-sm mb-16">
+          {apps.map((app, index) => (
+            <Card
+              key={index}
+              className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm hover:bg-gray-700/50 transition-colors cursor-pointer"
+            >
+              <div className="p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center text-sm">
+                    {app.icon}
+                  </div>
+                  <span className="text-white font-medium">{app.name}</span>
+                </div>
+                <span className="text-gray-400 text-sm">{app.description}</span>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Help Section */}
+        <p className="text-gray-400 text-sm mb-8">
+          Need help with one of our apps?
+        </p>
+
+        {/* Footer Links */}
+        <div className="flex gap-4 text-sm">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="text-gray-400 underline decoration-gray-600 underline-offset-4 hover:text-gray-300 hover:decoration-gray-400 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Pixi Support
           </a>
+          <span className="text-gray-600">•</span>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="text-gray-400 underline decoration-gray-600 underline-offset-4 hover:text-gray-300 hover:decoration-gray-400 transition-colors"
           >
-            Read our docs
+            Cue Support
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
