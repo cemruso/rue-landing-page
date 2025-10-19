@@ -1,327 +1,311 @@
+import RueLayout from "@/components/RueLayout";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
-
-const WaveIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    className="text-white"
-  >
-    <path
-      d="M3 12C3 12 5.5 7 12 7C18.5 7 21 12 21 12C21 12 18.5 17 12 17C5.5 17 3 12 3 12Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="2"/>
-    <path
-      d="M2 6L4 8M20 6L18 8M6 2L8 4M16 2L18 4M2 18L4 16M20 18L18 16M6 22L8 20M16 22L18 20"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-    />
-  </svg>
-);
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1a1b3a] via-[#0f1022] to-[#0a0b1e] text-white font-sans">
-      <div className="max-w-4xl mx-auto px-6 py-16">
-
+    <RueLayout>
+      <div className="space-y-12 text-left max-w-2xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-12">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <WaveIcon />
-            <span className="text-xl font-medium">44pixels</span>
-          </Link>
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl font-bold text-base-950">App Support</h1>
+          <p className="text-base-700 text-lg">
+            Get help with Rue Human Design and find answers to common questions.
+          </p>
         </div>
 
-        {/* Main Content */}
-        <div className="space-y-12">
+        {/* Contact Information */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-6">
+            <h2 className="text-2xl font-bold text-base-950">Contact Us</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  General Support
+                </h3>
+                <p className="text-base-700">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@ruestudios.app"
+                    className="text-primary-700 underline decoration-primary-400 underline-offset-4 hover:decoration-primary-700 transition-colors"
+                  >
+                    support@ruestudios.app
+                  </a>
+                </p>
+                <p className="text-base-600 text-sm mt-1">
+                  We typically respond within 24-48 hours.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Business Inquiries
+                </h3>
+                <p className="text-base-700">
+                  Email:{" "}
+                  <a
+                    href="mailto:hello@ruestudios.app"
+                    className="text-primary-700 underline decoration-primary-400 underline-offset-4 hover:decoration-primary-700 transition-colors"
+                  >
+                    hello@ruestudios.app
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
 
-          {/* Support Header */}
-          <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold">Support & Help</h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Get help with our apps, understand our policies, and find answers to common questions.
+        {/* App Information */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-6">
+            <h2 className="text-2xl font-bold text-base-950">
+              About Rue Human Design
+            </h2>
+            <div className="space-y-4">
+              <p className="text-base-700">
+                Rue Human Design is your personal guide to understanding your
+                unique energetic blueprint. Our app combines the ancient wisdom
+                of Human Design with modern AI technology to provide
+                personalized insights and guidance for your journey of
+                self-discovery.
+              </p>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-base-900">
+                  Key Features:
+                </h3>
+                <ul className="list-disc list-inside space-y-1 text-base-700">
+                  <li>
+                    Personalized Human Design chart based on your birth
+                    information
+                  </li>
+                  <li>AI-powered insights tailored to your unique design</li>
+                  <li>Daily guidance and decision-making support</li>
+                  <li>Learn about your Type, Strategy, Authority, and more</li>
+                  <li>
+                    Beautifully designed interface with intuitive navigation
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* FAQ Section */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-6">
+            <h2 className="text-2xl font-bold text-base-950">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  How do I get started with Rue?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Simply download the app from the App Store, enter your birth
+                  information (date, time, and location), and Rue will generate
+                  your personalized Human Design chart. From there, you can
+                  explore your design and receive AI-powered insights tailored
+                  to you.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  What is Human Design?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Human Design is a system that combines ancient wisdom
+                  traditions (including the I Ching, astrology, Kabbalah, and
+                  chakras) with modern science. It provides a unique blueprint
+                  of your energetic makeup, helping you understand how
+                  you&apos;re designed to interact with the world.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Do I need to know my exact birth time?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Yes, your exact birth time is important for an accurate Human
+                  Design chart. If you don&apos;t know your birth time, you can
+                  often find it on your birth certificate or by contacting the
+                  hospital where you were born.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Is my data private and secure?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Absolutely. We take your privacy seriously. Your birth
+                  information and personal data are encrypted and stored
+                  securely. We never share your personal information with third
+                  parties. See our{" "}
+                  <a
+                    href="/privacy"
+                    className="text-primary-700 underline decoration-primary-400 underline-offset-4 hover:decoration-primary-700 transition-colors"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  for more details.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  How do I delete my account?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  You can delete your account at any time by contacting us at
+                  support@ruestudios.app. We will process your request within 30
+                  days and permanently delete all your personal data.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Do you offer subscriptions?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  The app offers both free and premium features. Premium
+                  subscriptions unlock advanced insights, unlimited AI
+                  interactions, and exclusive content. All subscriptions are
+                  managed through your Apple ID and can be canceled at any time
+                  in your device settings.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  How do I cancel my subscription?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  To cancel your subscription, go to Settings → [Your Name] →
+                  Subscriptions on your iOS device, find Rue Human Design, and
+                  select &ldquo;Cancel Subscription.&rdquo; You&apos;ll continue
+                  to have access to premium features until the end of your
+                  current billing period.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  The app isn&apos;t working properly. What should I do?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  First, try restarting the app or your device. If issues
+                  persist, please email us at support@ruestudios.app with
+                  details about the problem (including your device model and iOS
+                  version), and we&apos;ll help you resolve it as quickly as
+                  possible.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  How do I request a refund?
+                </h3>
+                <p className="text-base-700 text-sm">
+                  All purchases are processed through the Apple App Store. To
+                  request a refund, please visit Apple&apos;s Request a Refund
+                  page at reportaproblem.apple.com. Refunds are subject to
+                  Apple&apos;s refund policy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Age Rating & Content */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-6">
+            <h2 className="text-2xl font-bold text-base-950">
+              Age Rating & Content Guidelines
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Age Rating: 4+
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Rue Human Design is rated for ages 4 and up and contains no
+                  objectionable content. The app provides educational and
+                  inspirational content based on Human Design principles.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Content Safety
+                </h3>
+                <ul className="list-disc list-inside space-y-1 text-base-700 text-sm">
+                  <li>No violent, graphic, or objectionable content</li>
+                  <li>AI-generated content is filtered for appropriateness</li>
+                  <li>No advertisements or third-party tracking</li>
+                  <li>Family-friendly and educational focus</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Technical Support */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-6">
+            <h2 className="text-2xl font-bold text-base-950">
+              Technical Requirements
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  System Requirements
+                </h3>
+                <ul className="list-disc list-inside space-y-1 text-base-700 text-sm">
+                  <li>iOS 15.0 or later</li>
+                  <li>iPhone, iPad, or iPod touch</li>
+                  <li>Internet connection required for AI features</li>
+                  <li>Approximately 50MB of storage space</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-base-900 mb-2">
+                  Supported Languages
+                </h3>
+                <p className="text-base-700 text-sm">
+                  Currently available in English, with more languages coming
+                  soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Feedback */}
+        <Card className="bg-card border-border">
+          <div className="p-8 space-y-4">
+            <h2 className="text-2xl font-bold text-base-950">
+              We&apos;d Love to Hear From You
+            </h2>
+            <p className="text-base-700">
+              Have suggestions, feedback, or feature requests? We&apos;re
+              constantly improving Rue based on user feedback. Please reach out
+              to us at{" "}
+              <a
+                href="mailto:hello@ruestudios.app"
+                className="text-primary-700 underline decoration-primary-400 underline-offset-4 hover:decoration-primary-700 transition-colors"
+              >
+                hello@ruestudios.app
+              </a>
+              .
+            </p>
+            <p className="text-base-700">
+              If you love using Rue, please consider leaving us a review on the
+              App Store. Your reviews help others discover the app and support
+              our small team!
             </p>
           </div>
-
-          {/* Contact Information */}
-          <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-            <div className="p-8 space-y-6">
-              <h2 className="text-2xl font-bold">Contact Us</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">General Support</h3>
-                  <p className="text-gray-300">Email: support@44pixels.ai</p>
-                  <p className="text-gray-300">We typically respond within 24-48 hours.</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Business Inquiries</h3>
-                  <p className="text-gray-300">Email: hello@44pixels.ai</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Address</h3>
-                  <p className="text-gray-300">44pixels Ltd.<br />London, United Kingdom</p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* App-Specific Support */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-              <div className="p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center">⚫</div>
-                  <h3 className="text-xl font-bold">Pixi Chat Support</h3>
-                </div>
-                <p className="text-gray-300">
-                  Get help with Pixi Chat features, troubleshooting, and account management.
-                </p>
-                <div className="space-y-2 text-sm text-gray-400">
-                  <p>• Chat history and sync issues</p>
-                  <p>• Model selection and preferences</p>
-                  <p>• Account and subscription support</p>
-                  <p>• Technical troubleshooting</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-              <div className="p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center">🎵</div>
-                  <h3 className="text-xl font-bold">Cue Support</h3>
-                </div>
-                <p className="text-gray-300">
-                  Audio companion app support and troubleshooting assistance.
-                </p>
-                <div className="space-y-2 text-sm text-gray-400">
-                  <p>• Audio playback issues</p>
-                  <p>• Sync and connectivity problems</p>
-                  <p>• Feature requests and feedback</p>
-                  <p>• Performance optimization</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          {/* Privacy Policy */}
-          <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-            <div className="p-8 space-y-6">
-              <h2 className="text-2xl font-bold">Privacy Policy</h2>
-              <div className="space-y-4 text-gray-300">
-                <p><strong>Last Updated:</strong> October 2024</p>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Information We Collect</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Usage data and app analytics to improve our services</li>
-                    <li>Device information for compatibility and performance optimization</li>
-                    <li>Optional account information if you choose to create an account</li>
-                    <li>Crash reports and diagnostic data to fix bugs and improve stability</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">How We Use Your Information</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Provide and maintain our mobile applications</li>
-                    <li>Improve app functionality and user experience</li>
-                    <li>Respond to support requests and customer service inquiries</li>
-                    <li>Send important updates about our services (with your consent)</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Data Protection</h3>
-                  <p className="text-sm">
-                    We implement appropriate security measures to protect your personal information.
-                    We do not sell, trade, or share your personal data with third parties without your consent,
-                    except as required by law or to provide our services.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Your Rights</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Request access to your personal data</li>
-                    <li>Request correction of inaccurate data</li>
-                    <li>Request deletion of your data</li>
-                    <li>Opt-out of marketing communications</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Terms of Service */}
-          <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-            <div className="p-8 space-y-6">
-              <h2 className="text-2xl font-bold">Terms of Service</h2>
-              <div className="space-y-4 text-gray-300">
-                <p><strong>Last Updated:</strong> October 2024</p>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Acceptance of Terms</h3>
-                  <p className="text-sm">
-                    By downloading, installing, or using our mobile applications, you agree to be bound by these Terms of Service.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Use of Our Services</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>You must be at least 13 years old to use our applications</li>
-                    <li>You agree to use our services only for lawful purposes</li>
-                    <li>You will not attempt to reverse engineer or modify our applications</li>
-                    <li>You will not use our services to transmit harmful or illegal content</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Intellectual Property</h3>
-                  <p className="text-sm">
-                    Our applications, including all content, features, and functionality, are owned by 44pixels Ltd.
-                    and are protected by international copyright, trademark, and other intellectual property laws.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Limitation of Liability</h3>
-                  <p className="text-sm">
-                    44pixels Ltd. shall not be liable for any indirect, incidental, special, consequential, or punitive damages
-                    resulting from your use of our applications. Our total liability shall not exceed the amount you paid for our services.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Modifications</h3>
-                  <p className="text-sm">
-                    We reserve the right to modify these terms at any time. We will notify users of significant changes
-                    through our applications or website.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* App Store Compliance */}
-          <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-            <div className="p-8 space-y-6">
-              <h2 className="text-2xl font-bold">App Store Compliance</h2>
-              <div className="space-y-4 text-gray-300">
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Age Rating</h3>
-                  <p className="text-sm">
-                    Our applications are rated 4+ and are appropriate for all ages. We do not knowingly collect
-                    personal information from children under 13 without parental consent.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Content Guidelines</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>All content in our apps complies with App Store guidelines</li>
-                    <li>We do not display objectionable content</li>
-                    <li>AI-generated content is clearly marked and filtered for appropriateness</li>
-                    <li>User-generated content is moderated and filtered</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Subscriptions & Purchases</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>All in-app purchases are processed through official app stores</li>
-                    <li>Subscription terms are clearly displayed before purchase</li>
-                    <li>Users can manage subscriptions through their device settings</li>
-                    <li>Refunds are handled according to app store policies</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Data Security</h3>
-                  <p className="text-sm">
-                    We implement industry-standard security measures and comply with relevant data protection regulations
-                    including GDPR and CCPA where applicable.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* FAQ */}
-          <Card className="bg-gray-800/40 border-gray-700/50 backdrop-blur-sm">
-            <div className="p-8 space-y-6">
-              <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">How do I delete my account?</h3>
-                  <p className="text-gray-300 text-sm">
-                    You can delete your account by contacting our support team at support@44pixels.ai.
-                    We will process your request within 30 days and permanently delete your data.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Do you store my conversations?</h3>
-                  <p className="text-gray-300 text-sm">
-                    Conversations may be temporarily stored to provide continuity within the app session.
-                    We do not permanently store personal conversations unless you explicitly save them.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">How can I report inappropriate content?</h3>
-                  <p className="text-gray-300 text-sm">
-                    If you encounter inappropriate content, please contact us immediately at support@44pixels.ai
-                    with details. We take content moderation seriously and will investigate promptly.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">Can I use the app offline?</h3>
-                  <p className="text-gray-300 text-sm">
-                    Some features require an internet connection for AI processing. Basic functionality
-                    may be available offline, but full features require connectivity.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Footer */}
-          <div className="text-center pt-12 border-t border-gray-700/50">
-            <p className="text-gray-400 text-sm mb-4">
-              © 2024 44pixels Ltd. All rights reserved.
-            </p>
-            <div className="flex justify-center gap-6 text-sm">
-              <Link href="/" className="text-gray-400 hover:text-gray-300 transition-colors">
-                Home
-              </Link>
-              <span className="text-gray-600">•</span>
-              <a href="mailto:support@44pixels.ai" className="text-gray-400 hover:text-gray-300 transition-colors">
-                Contact
-              </a>
-              <span className="text-gray-600">•</span>
-              <a href="#privacy" className="text-gray-400 hover:text-gray-300 transition-colors">
-                Privacy
-              </a>
-              <span className="text-gray-600">•</span>
-              <a href="#terms" className="text-gray-400 hover:text-gray-300 transition-colors">
-                Terms
-              </a>
-            </div>
-          </div>
-        </div>
+        </Card>
       </div>
-    </div>
+    </RueLayout>
   );
 }

@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "44pixels - Building the next wave of mobile products",
-  description: "We're a team of product specialists building the next wave of everyday mobile products—powered by AI.",
+  title: "Rue Studios - Discover Your Human Design",
+  description:
+    "Transform your life with AI-powered Human Design insights. Understand your unique energetic blueprint and unlock your potential.",
 };
 
 export default function RootLayout({
